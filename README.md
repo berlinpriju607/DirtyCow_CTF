@@ -18,6 +18,8 @@ system files.
 
 ♦ Retrieved the final flag after achieving root-level privileges. 
 
+https://github.com/berlinpriju607/DirtyCow_CTF/blob/3722977a670672afc43fcb3937fe8d7cf9d1aa91/Screenshot_2025-12-08_14_37_11.png
+
 
 
 
