@@ -6,8 +6,10 @@ You can check the Linux kernel version using the command `uname -a` , which disp
 ♦ Downloaded a publicly available proof-of-concept exploit for educational and CTF purposes. 
 [Dirty COW Official Website](https://dirtycow.ninja/)
 
-♦ Compiled the exploit using `gcc -pthread dirtycow.c -o` dirty to create an executable 
+♦ Compiled the exploit using `gcc -pthread dirtycow.c -o dirty` dirty to create an executable 
 payload. 
+
+`./dirty`
 
 ♦ Ran the exploit, which successfully abused the kernel race condition to overwrite protected 
 system files. 
