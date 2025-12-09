@@ -9,7 +9,7 @@ You can check the Linux kernel version using the command `uname -a` , which disp
 ♦ Compiled the exploit using `gcc -pthread dirtycow.c -o dirty` dirty to create an executable 
 payload. 
 
-`./dirty`
+Then execute `./dirty`
 
 ♦ Ran the exploit, which successfully abused the kernel race condition to overwrite protected 
 system files. 
