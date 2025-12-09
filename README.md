@@ -1,12 +1,16 @@
 # DirtyCow_CTF
-Dirty COW is a privilege escalation vulnerability in the Linux kernel's memory subsystem, specifically in the Copy-On-Write (COW) mechanism.
-
-And here, Dirty COW (CVE-2016-5195) is a well-known privilege escalation vulnerability affecting the Linux kernel’s 
-copy-on-write (COW) mechanism. It occurs due to a race condition that allows an unprivileged local user to 
-write to read-only memory mappings. By exploiting this flaw, an attacker can overwrite critical system files—
-often /etc/passwd—to gain root access. The exploit is stable, widely documented, and works reliably on 
-older kernels like 3.13.0-32. In this challenge, the vulnerability provided a viable method to escalate 
-privileges to root on the JEELLY target machine. 
+Dirty COW is a privilege escalation vulnerability in the Linux kernel's memory subsystem, specifically in the Copy-On-Write (COW) mechanism. This flaw makes it possible to write to memory-mapped files that are supposed to be read-only, such as /etc/passwd, enabling attackers to escalate their privileges. Dirty COW affected almost every Linux kernel version released over the previous nine years and was widely used in real attacks especially on older kernels. The vulnerability was patched in October 2016 by fixing how the kernel handles copy-on-write memory operations.
+## DirtyCow_Exploit
+♦ Verified that the machine’s kernel version was vulnerable to the Dirty COW (CVE-2016-5195) 
+privilege escalation flaw. 
+♦ Downloaded a publicly available proof-of-concept exploit for educational and CTF purposes. 
+[Dirty COW Official Website](https://dirtycow.ninja/)
+♦ Compiled the exploit using `gcc -pthread dirtycow.c -o` dirty to create an executable 
+payload. 
+♦ Ran the exploit, which successfully abused the kernel race condition to overwrite protected 
+system files. 
+♦ Gained full root access on the JEELLY CTF target, allowing complete control over the system. 
+♦ Retrieved the final flag after achieving root-level privileges. 
 
 
 
